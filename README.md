@@ -23,9 +23,12 @@ Para conduzir o projeto, utilizei do método do CRISP, método cíclico de desen
 
 ## 2. Explique como você faria a previsão do tipo de falha a partir dos dados. Quais variáveis e/ou suas transformações você utilizou e por quê? Qual tipo de problema estamos resolvendo (regressão, classificação)? Qual modelo melhor se aproxima dos dados e quais seus prós e contras? Qual medida de performance do modelo foi escolhida e por quê?
 **R**: Para prever o tipo de falha a partir dos dados, utilizei de algoritmos de Machine Learning, com o objetivo de encontrar padrões nos dados que possam indicar que uma máquina vai falhar. 
+
 As variáveis e transformações utilizadas estão expostas nas seções 4 e 5 do Jupyter Notebook (Preparação dos Dados e *Feature Selection*)
 Como estamos diante de uma variável alvo categórica, com mais de dois valores distintos e queremos prever o tipo de falha, estamos diante de um problema de Classificação com Multi-Classes. 
+
 Após testar alguns algoritmos, adotei como algoritmo final o LGBMClassifier, por apresentar um *F1-Score* melhor que de seus pares. Esse algoritmo consiste em um framework de *gradient boosting* que usa algoritmos de aprendizado baseados em árvores.
+
 Adotei essa métrica vez que, como não sei qual o objetivo da empresa com esse projeto (prever precisamente se uma falha vai acontecer ou conseguir prever todas as falhas possíveis nas máquinas), o *F1-Score* representa a média harmônica entre as métricas de *Precision* e *Recall*. 
 
 ## 3. Envie o resultado final do modelo em uma planilha com apenas duas colunas (rowNumber, predictedValues).
